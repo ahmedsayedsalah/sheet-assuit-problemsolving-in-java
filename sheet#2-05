@@ -1,0 +1,25 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/E
+*/
+
+//code
+import java.util.Scanner;
+public class Java {
+    public static void main(String[] args) {
+    Scanner input=new Scanner(System.in);          
+    int n,i=2,max;
+    n=input.nextInt();
+    max=input.nextInt();
+    while(i<=n)
+    {
+        int a;
+        a=input.nextInt();
+        if(a>max)
+            max=a;
+    i++;
+    }
+        System.out.println(max);
+//end
+    }
+}
