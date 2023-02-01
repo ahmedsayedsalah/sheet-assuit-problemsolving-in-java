@@ -1,0 +1,30 @@
+/*
+                        لينك المشكل
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/C
+*/
+import java.util.Scanner;
+public class Java {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);          
+        int n,countev=0,countod=0,countpos=0,countneg=0;
+        n=input.nextInt();
+        for(int i=1;i<=n;i++)
+        {
+        int num;
+        num=input.nextInt();
+        if(num%2==0)
+            countev++;
+        else
+            countod++;
+        if(num!=0) // 0 is not positive and not negative
+        {
+        if(num==Math.abs(num))
+            countpos++;
+        else
+            countneg++;
+        }
+    }
+        System.out.println("Even: "+countev+"\nOdd: "+countod+"\nPositive: "+countpos+"\nNegative: "+countneg);  
+//end
+    }
+}
