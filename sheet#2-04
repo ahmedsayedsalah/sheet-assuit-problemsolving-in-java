@@ -1,0 +1,23 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/D
+*/
+import java.util.Scanner;
+public class Java {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);          
+        while(true)
+        {
+        int pass;
+        pass=input.nextInt();
+        if(pass==1999)
+        {
+            System.out.println("Correct"); 
+            break; // loop بتكسر ال
+        }
+        else
+                System.out.println("Wrong");
+        }
+//end
+    }
+}
