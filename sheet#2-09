@@ -1,0 +1,24 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/I
+*/
+
+//code
+import java.util.Scanner;
+public class Java {
+    public static void main(String[] args) {
+    Scanner input=new Scanner(System.in);          
+    int n=input.nextInt(),b=0;
+    int c=n;
+    while(n!=0)
+    {
+        b= (b*10)+(n%10)/*لاظهار اخر رقم*/;
+        n/=10; //لا خفاء اخر رقم
+    }
+    if(c==b)
+        System.out.println(b+"\nYES");
+    else
+        System.out.println(b+"\nNO");
+//end
+    }
+}
