@@ -1,0 +1,43 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/M
+*/
+
+//code
+import java.util.Scanner;
+public class Java {
+    // main method
+    public static void main(String[] args) {
+        
+    //class used to enter numbers
+    Scanner input=new Scanner(System.in); 
+    
+    int x=input.nextInt(),y=input.nextInt(),b=0;
+    for(int i=x;i<=y;i++) //loop for numbers from x to y
+    {
+        boolean check=false;
+        int a=i;         
+        while(a!=0)       //loop to check about numbers that is luckey or not
+        {
+            if(a%10==4 || a%10==7)
+            {
+                  check=true;
+                  a/=10; //0
+            }
+            else
+            {
+                check=false;
+                break;
+            }
+        }
+        if(check==true)      //used to print luckey numbers
+            {
+                System.out.print(i+" ");
+                b++;         //used to print -1
+            }
+    }
+    if(b==0)
+        System.out.print("-1");
+//end
+    }
+}
