@@ -1,0 +1,29 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/R
+*/
+
+//code
+import java.util.Scanner;
+public class Java {
+    // main method
+    public static void main(String[] args) {
+        
+    //class used to enter numbers
+    Scanner input=new Scanner(System.in); 
+    
+    while(true)
+    {
+        int n=input.nextInt(),m=input.nextInt(),sum=0;
+        if(n<=0 || m<=0) // to prevent numbers that is less than or equal zero.
+            break;
+        for(int i=Math.min(n,m);i<=Math.max(n,m);i++) //loop for numbers from n to m and Vice Versa. 
+        {
+            System.out.print(i+" ");
+            sum+=i;
+        }
+        System.out.println("sum ="+sum);
+    }
+//end
+    }
+}
