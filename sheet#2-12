@@ -1,0 +1,20 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/L
+*/
+
+//code
+import java.util.Scanner;
+public class Java {
+    public static void main(String[] args) {
+    Scanner input=new Scanner(System.in);          
+     int x=input.nextInt(),y=input.nextInt(),gcd=0;
+    for(int i=1;i<=Math.min(x,y);i++)
+    {
+        if(x%i==0 && y%i==0)
+            gcd=i;
+    }
+        System.out.println(gcd);
+//end
+    }
+}
