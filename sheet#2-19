@@ -1,0 +1,28 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/S
+*/
+
+//code
+import java.util.Scanner;
+public class Java {
+    // main method
+    public static void main(String[] args) {
+        
+    //class used to enter numbers
+    Scanner input=new Scanner(System.in); 
+    
+    int N=input.nextInt();
+    for(int k=1;k<=N;k++) //loop for number of test cases
+    {
+        int n=input.nextInt(),m=input.nextInt(),sumodd=0; 
+        for(int i=Math.min(n,m)+1;i<Math.max(n,m);i++) //loop for numbers from n to m and Vice Versa.
+        {
+            if(i%2!=0)  //check that is odd or not
+            sumodd+=i;
+        }
+        System.out.println(sumodd);
+    }
+//end
+    }
+}
