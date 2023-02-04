@@ -1,0 +1,27 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/V
+*/
+
+//code
+import java.util.Scanner;
+public class Java {
+    // main method
+    public static void main(String[] args) {
+        
+    //class used to enter numbers
+    Scanner input=new Scanner(System.in); 
+    
+    int n=input.nextInt();
+    for(int i=1;i<=(n*3+n);i++)
+    {
+        if(i%4==0)
+        {
+            System.out.println("PUM");
+        }
+        else
+            System.out.print(i+" ");
+    }
+//end
+    }
+}
