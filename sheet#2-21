@@ -1,0 +1,35 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/U
+*/
+
+//code
+import java.util.Scanner;
+public class Java {
+    // main method
+    public static void main(String[] args) {
+        
+    //class used to enter numbers
+    Scanner input=new Scanner(System.in); 
+    
+    int n=input.nextInt(),sum=0 /*sum of i that is between a and b*/,a=input.nextInt(),b=input.nextInt();
+    
+    //loop for numbers from 1 to n
+    for(int i=1;i<=n;i++) 
+    {
+    int c=i /*value of i*/ ,sum1=0 /*sum of digits of i*/;
+    
+    //loop sum of digits of i
+    while(c!=0)
+    {
+       sum1+=c%10;
+       c/=10;
+    }
+    if(sum1>=a && sum1<=b)
+        sum+=i;
+    //end of for loop
+    }
+    System.out.print(sum);
+//end
+    }
+}
