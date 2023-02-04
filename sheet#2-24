@@ -1,0 +1,35 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/X
+*/
+
+//code
+import java.util.Scanner;
+public class Java {
+    // main method
+    public static void main(String[] args) {
+        
+    //class used to enter numbers
+    Scanner input=new Scanner(System.in); 
+    
+    int n=input.nextInt();
+    for(int z=1;z<=n;z++)
+    {
+        int a=input.nextInt(),c=0,d=0;     // a=8
+        //loop to convert decimal to binary
+        while(a!=0)
+        {
+            if(a%2==1)     // 0 0 0 1
+                c++;       // c=1;
+            a/=2;          // 4 2 1 0
+        }
+        //loop to convert binary to decimal
+        for(int i=0;i<c;i++)
+        {
+            d+=Math.pow(2,i);   // d=1
+        }
+        System.out.println(d);
+    }
+//end
+    }
+}
