@@ -1,0 +1,31 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/326907/problem/C
+*/
+
+//code
+import java.util.Scanner;
+public class Java {
+    // main method
+    public static void main(String[] args) {
+        
+    //class used to enter numbers
+    Scanner input=new Scanner(System.in); 
+    
+     int n=input.nextInt(),k=input.nextInt(),res=1000000000+1;
+    for(int a=1;a<=n;a++) // 123   456 78
+    {
+        int x=input.nextInt();            // 4-12  350 27
+        if(res>x)
+            res=x;        // 4-1-1 330 22
+        if(a%k==0)
+        {
+            System.out.print(res+" ");
+            res=1000000000+1;
+        }
+        else if(a==n)
+            System.out.print(res);
+    }
+//end
+    }
+}
