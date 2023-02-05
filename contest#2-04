@@ -1,0 +1,33 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/326907/problem/D
+*/
+
+//code
+import java.util.Scanner;
+public class Java {
+    // main method
+    public static void main(String[] args) {
+        
+    //class used to enter numbers
+    Scanner input=new Scanner(System.in); 
+    
+    int n=input.nextInt();
+    while(n>0)
+    {
+       int a=input.nextInt(),b=input.nextInt();
+       int mi=Math.min(a,b),ma=Math.max(a,b);
+
+       /*
+        sum of numbers from 1 or 0 to n = n(n+1)/2
+        sum of numbers from m to n (inclusive) = n(n+1)/2 - (m(m+1)/2)
+       */
+
+       mi--; //because m is inclusive in the sum
+       long res1=(long)mi*(mi+1)/2,res2=(long)ma*(ma+1)/2;
+        System.out.println(res2-res1);
+       n--;
+    }
+//end
+    }
+}
