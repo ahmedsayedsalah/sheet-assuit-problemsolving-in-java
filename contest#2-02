@@ -1,0 +1,33 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/326907/problem/B
+*/
+
+//code
+import java.util.Scanner;
+public class Java {
+    // main method
+    public static void main(String[] args) {
+        
+    //class used to enter numbers
+    Scanner input=new Scanner(System.in); 
+    
+    int n=input.nextInt();
+    for(int a=1;a<=n;a++)
+    {
+        for(int b=1;b<=n;b++)
+        {
+            if(a==(n/2+1) && a==b)
+                System.out.print("X");
+            else if(a==b)
+                System.out.print("\\");
+            else if((n+1)-b==a)
+                System.out.print("/");
+            else
+                System.out.print("*");
+        }
+        System.out.println("");
+    }
+//end
+    }
+}
