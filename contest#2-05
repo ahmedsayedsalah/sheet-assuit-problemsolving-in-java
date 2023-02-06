@@ -1,0 +1,25 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/326907/problem/E
+*/
+
+//code
+import java.util.Scanner;
+public class Java {
+    // main method
+    public static void main(String[] args) {
+        
+    //class used to enter numbers
+    Scanner input=new Scanner(System.in); 
+    
+    long  n=input.nextLong();
+    long  row=n/4,column=0;
+    if(row % 2 ==0)
+        column=n%4;
+    else
+        column=3-(n%4);
+        
+        System.out.print(row+" "+column);
+//end
+    }
+}
