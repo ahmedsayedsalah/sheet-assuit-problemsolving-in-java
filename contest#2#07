@@ -1,0 +1,41 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/326907/problem/G
+*/
+
+//code
+import java.util.Scanner;
+public class Java {
+    // main method
+    public static void main(String[] args) {
+        
+    //class used to enter numbers
+    Scanner input=new Scanner(System.in); 
+    
+    long  n=input.nextLong();
+    for(long d=1;d<=n;d++)
+    {
+        
+        long  a=input.nextLong(),b=input.nextLong(),sum=0;
+        if(a*(a+1)/2 < b)
+                System.out.println("-1");
+        else
+        {
+            for(long  c=a;c>=1;c--)
+            {
+                if(sum+c <= b)
+                    {
+                        sum+=c;
+                        System.out.print(c+" ");
+                    }
+                if(sum==b)
+                    {
+                        System.out.println("");
+                        break;
+                    }
+            }
+        }
+    }
+//end
+    }
+}
