@@ -1,0 +1,32 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/326907/problem/F
+*/
+
+//code
+import java.util.Scanner;
+public class Java {
+    // main method
+    public static void main(String[] args) {
+        
+    //class used to enter numbers
+    Scanner input=new Scanner(System.in); 
+    
+    int n=input.nextInt();
+    long b=0;
+    for(int c=1;c<=n;c++)
+    {
+        long a=input.nextLong(),counter=0; //18 24  7
+        
+        while(a%2==0)
+        {
+            counter++;         //1  3   0
+            a/=2;
+        }
+        if(b<counter)
+            b=counter;
+    }
+        System.out.println(b);
+//end
+    }
+}
