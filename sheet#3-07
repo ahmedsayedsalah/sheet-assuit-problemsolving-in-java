@@ -1,0 +1,40 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/G
+*/
+
+//code
+// for scanner , Arrays and collections
+import java.util.*;
+
+public class Java {
+    // main method
+    public static void main(String[] args) {
+        
+    //class used to enter numbers
+    Scanner input=new Scanner(System.in); 
+    
+    //enter size of array
+    int n=input.nextInt();
+    int[] arr=new int[n];
+        
+        //enter value of array
+        for (int i = 0; i < arr.length; i++) {
+            arr[i]=input.nextInt(); 
+        }
+        boolean check=true;
+        //check if the array is a palindrome or not
+        for (int i = 0; i < arr.length/2; i++) {
+            if(!(arr[i]==arr[arr.length-1-i]))
+            {
+                check=false;
+                break;
+            }
+        }
+        if(check==true)
+            System.out.print("YES");
+        else
+            System.out.print("NO");
+//end
+    }
+}
