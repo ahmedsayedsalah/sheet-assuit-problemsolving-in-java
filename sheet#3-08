@@ -1,0 +1,47 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/H
+*/
+
+//code
+// for scanner , Arrays and collections
+import java.util.*;
+
+public class Java {
+    
+//print
+static void print(int array[],int n)
+{
+    for(int i=0;i<n;i++)
+        System.out.print(array[i]+" ");
+}
+//selectionSort                       //0  1  2  3  4  5
+static void selectionSort(int array[],int n) //60 40 50 30 10 20
+{
+    int minIndex=0;
+    for(int i=0;i<n;i++)
+    {
+        minIndex=i;  //{0} {1} {2} {3} {5}
+        for(int j=i+1;j<n;j++) //{1 2 3 4 5} {2,3,4,5} {3,4,5} {4,5} {5}
+        {
+            if(array[j] < array[minIndex])
+                minIndex=j; //4 5 3 1 2 0
+        }
+      array[i]=array[i]^array[minIndex]^(array[minIndex]=array[i]);
+    }
+}
+    // main method
+    public static void main(String[] args) {
+        
+    //class used to enter numbers
+    Scanner input=new Scanner(System.in); 
+    
+    int n=input.nextInt();
+    int[] array=new int[n];
+    for(int i=0;i<n;i++)
+        array[i]=input.nextInt();
+        selectionSort(array, n);
+        print(array, n);
+//end
+    }
+}
