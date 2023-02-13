@@ -1,0 +1,48 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/I
+*/
+
+//code
+// for scanner , Arrays and collections
+import java.util.*;
+
+public class Java {
+    
+    // main method
+    public static void main(String[] args) {
+        
+    //class used to enter numbers
+    Scanner input=new Scanner(System.in); 
+    
+       //start
+       int n=input.nextInt();
+        for(int i=1;i<=n;i++)
+        {
+             int t=input.nextInt(),min=0;
+             boolean flag=true;
+             int[]arr=new int[t];
+            for(int j=0;j<t;j++)
+            {
+                arr[j]=input.nextInt();
+            }
+            for(int z=1;z<=t;z++)
+            {
+                for(int a=z+1;a<=t;a++)
+                {
+                    int res=(arr[z-1] + arr[a-1]) + (a-z);
+                    if(min>res & flag==false)
+                        min=res;
+                    if(flag==true)
+                    {
+                        min=res;
+                        flag=false;
+                    }
+                }
+            }
+            System.out.println(min);
+        }
+
+//end
+    }
+}
