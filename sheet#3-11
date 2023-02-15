@@ -1,0 +1,36 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/K
+*/
+
+//code
+// for scanner , Arrays and collections
+import java.util.*;
+
+public class Java {
+    
+    // main method
+    public static void main(String[] args) {
+        
+    //class used to enter numbers
+    Scanner input=new Scanner(System.in); 
+       
+    int num=input.nextInt(),sum=0;
+    String strdigit=input.next();
+    char[] arrOfChar=strdigit.toCharArray();
+    for(int i=0 ; i<num ; i++)
+    {   
+          //fiirst way
+          int digit=arrOfChar[i];
+          sum+=digit-48;
+          //second way
+//        int digit=Character.getNumericValue(arrOfChar[i]);
+//        sum+=digit;
+          //third way
+//        int digit=Integer.parseInt(String.valueOf(arrOfChar[i]));
+//        sum+=digit;
+    }
+        System.out.print(sum);
+//end
+    }
+}
