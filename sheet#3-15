@@ -1,0 +1,28 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/O
+*/
+
+//code
+// for scanner , Arrays and collections
+import java.util.*;
+
+public class Java {
+    // main method
+    public static void main(String[] args) {
+        
+    //class used to enter numbers
+    Scanner input=new Scanner(System.in); 
+     
+    int n=input.nextInt(); //5 //1
+    long  [] fibonacci=new long[n]; //0 1
+        for (int i = 0; i < n; i++) { //2=>{0+1} 3=>{1,2} 4=>{2,3}
+            if(i==0 || i==1)
+               fibonacci[i]=i; 
+            if(i>=2)
+            fibonacci[i]= fibonacci[i-1] + fibonacci[i-2];
+        }
+        System.out.print(fibonacci[n-1]);
+//end
+    }
+}
