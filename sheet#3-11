@@ -20,7 +20,7 @@ public class Java {
     char[] arrOfChar=strdigit.toCharArray();
     for(int i=0 ; i<num ; i++)
     {   
-          //fiirst way
+          //first way
           int digit=arrOfChar[i];
           sum+=digit-48;
           //second way
