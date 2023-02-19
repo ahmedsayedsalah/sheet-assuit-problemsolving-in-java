@@ -1,0 +1,55 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/Q
+*/
+
+//code
+// for scanner , Arrays and collections
+import java.util.*;
+
+public class Java {
+    // main method
+    public static void main(String[] args) {
+        
+    //class used to enter numbers
+    Scanner input=new Scanner(System.in); 
+    
+    int testCase=input.nextInt();
+    for(int i=1;i<=testCase;i++)
+    {
+        int size=input.nextInt(),ma=0,count=0; //5
+        int arr []=new int[size];
+        for(int a=0;a<size;a++) //0 1 2 3 4
+                                //1 4 2 3 5
+            {
+                arr[a]=input.nextInt();
+                count++;   //5
+            }
+        for(int b=0;b<size-1;b++) //0 1 2 3 4
+                                  //1 4 2 3 5
+        {
+            for(int c=b;c<size-1;c++) //{0 1 2 3} {1 2 3} {2 3}
+            {
+                if(b==c)
+                   {
+                       ma=Math.max(arr[c],arr[c+1]);// 4
+                       if(arr[c+1]>arr[c])
+                         count++;  //9
+                       else
+                         break;
+                   }
+                else
+                   {
+                       if(arr[c+1]>ma)
+                         count++;  //8
+                        else
+                         break;
+                       ma=Math.max(ma,arr[c+1]); //4
+                   }
+            }
+        }
+        System.out.println(count);
+        }
+//end
+    }
+}
