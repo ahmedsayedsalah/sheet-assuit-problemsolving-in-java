@@ -1,0 +1,37 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/Y
+*/
+
+//code
+// for scanner , Arrays and collections
+import java.util.*;
+
+public class Java {
+    // main method
+    public static void main(String[] args) {
+        
+    //class used to enter numbers
+    Scanner input=new Scanner(System.in); 
+    
+    int n=input.nextInt(),q=input.nextInt();
+    int arr[]=new int[n];
+    long  pf[]=new long[n];
+    Arrays.fill(arr, 0);
+    Arrays.fill(pf, 0);
+    for(int i=0;i<n;i++)
+        arr[i]=input.nextInt();
+    pf[0]=(long)arr[0];
+    for(int i=1;i<n;i++)
+        pf[i]=pf[i-1]+arr[i];
+    for(int i=1;i<=q;i++)
+    {
+        int a=input.nextInt(),b=input.nextInt();
+        if(a==1)
+            System.out.println(pf[b-1]);   
+        else
+            System.out.println(pf[b-1]-pf[a-2]);
+    }
+//end
+    }
+}
