@@ -1,0 +1,39 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/W
+*/
+
+//code
+// for scanner , Arrays and collections
+import java.util.*;
+
+public class Java {
+    
+    // main method
+    public static void main(String[] args) {
+        
+    //class used to enter numbers
+    Scanner input=new Scanner(System.in); 
+
+    int n=input.nextInt(),m=input.nextInt();//3 3
+    int arr[][]=new int[n][m];
+    for(int row=0;row<arr.length;row++)
+    {
+        for(int col=0;col<arr[row].length;col++)
+           arr[row][col]=input.nextInt();//2 3 5,
+    }
+    for(int row=0;row<arr.length;row++)
+    {
+        for(int col=0;col<arr[row].length/2;col++)
+        {
+            int temp=arr[row][col];
+            arr[row][col]=arr[row][arr[row].length-1-col];
+            arr[row][arr[row].length-1-col]=temp;
+        }
+        for(int col=0;col<arr[row].length;col++)
+            System.out.print(arr[row][col]+" ");
+        System.out.print("\n");  
+    }
+//end
+    }
+}
